@@ -23,7 +23,6 @@ exports.getComponent = ->
     return unless c.points? and c.points.length > 2
 
     vertices = ([point.x, point.y] for point in c.points)
-    console.log c.points, vertices
     ids = Delaunay.triangulate vertices
 
     v = (vertices[i] for i in ids)
